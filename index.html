@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Lou - Robotics Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .tabs {
+            background: white;
+            margin: 20px auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tab-buttons {
+            display: flex;
+            background: #34495e;
+            overflow-x: auto;
+        }
+        
+        .tab-button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+            white-space: nowrap;
+        }
+        
+        .tab-button:hover {
+            background: #2c3e50;
+        }
+        
+        .tab-button.active {
+            background: #3498db;
+        }
+        
+        .tab-content {
+            padding: 30px;
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .project {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .links a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kyle Lou</h1>
+            <p>Robotics Engineer | MS Candidate at Northeastern University</p>
+            <div class="links" style="margin-top: 15px;">
+                <a href="mailto:lou.ky@northeastern.edu" style="color: white;">Email</a>
+                <a href="#" style="color: white;">LinkedIn</a>
+                <a href="#" style="color: white;">GitHub</a>
+                <a href="#" style="color: white;">Resume (PDF)</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('home')">Home</button>
+                <button class="tab-button" onclick="showTab('robotics')">Robotics & Computer Vision</button>
+                <button class="tab-button" onclick="showTab('mechanical')">Mechanical Design</button>
+                <button class="tab-button" onclick="showTab('software')">Software & Creative</button>
+                <button class="tab-button" onclick="showTab('education')">Education & Skills</button>
+            </div>
+
+            <!-- Home Tab -->
+            <div id="home" class="tab-content active">
+                <h2>Welcome to My Portfolio</h2>
+                <p style="margin: 20px 0;">
+                    I'm a Robotics MS student at Northeastern University with a unique background 
+                    combining engineering management and hands-on technical skills. I'm passionate 
+                    about creating intelligent systems that bridge mechanical design, computer vision, 
+                    and software development.
+                </p>
+                
+                <h3>Technical Skills Summary</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Software</h4>
+                        <p>ROS, Python, MATLAB, C#, SQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Hardware</h4>
+                        <p>3D Printing, Laser Cutting, CNC, Waterjet</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Design Tools</h4>
+                        <p>SolidWorks, Unity, OpenCV, Adobe Illustrator</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Robotics</h4>
+                        <p>Computer Vision, Control Systems, Sensor Integration</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Robotics Tab -->
+            <div id="robotics" class="tab-content">
+                <div class="project">
+                    <h2>2D Computer Vision Shipwreck Reconstruction</h2>
+                    <p><strong>Technologies:</strong> Python, OpenCV, SIFT/ORB, GTSAM</p>
+                    <ul style="margin: 15px 0 15px 30px;">
+                        <li>Implemented panoramic image reconstruction with SIFT and ORB feature detection</li>
+                        <li>Optimized image alignment through GTSAM factor graph framework</li>
+                        <li>Improved feature detection through CLAHE histogram equalization</li>
+                    </ul>
+                    <div class="links">
+                        <a href="#">View Code</a>
+                        <a href="#">Documentation</a>
+                    </div>
+                </div>
+                <!-- Add more robotics projects here -->
+            </div>
+
+            <!-- Mechanical Tab -->
+            <div id="mechanical" class="tab-content">
+                <div class="project">
+                    <h2>Formula SAE Pedal Box Mounting System</h2>
+                    <p><strong>Technologies:</strong> SolidWorks, FEA Analysis, Sheet Metal Design</p>
+                    <ul style="margin: 15px 0 15px 30px;">
+                        <li>Designed sheet metal mounting components for competitive race vehicle</li>
+                        <li>Performed stress analysis to validate design under race conditions</li>
+                        <li>Collaborated with team to ensure proper integration with chassis</li>
+                    </ul>
+                    <div class="links">
+                        <a href="#">CAD Models</a>
+                        <a href="#">Analysis Results</a>
+                    </div>
+                </div>
+                <!-- Add laser cutter projects, other CAD work here -->
+            </div>
+
+            <!-- Software Tab -->
+            <div id="software" class="tab-content">
+                <div class="project">
+                    <h2>Unity Game Development</h2>
+                    <p><strong>Technologies:</strong> Unity, C#, Physics Simulation</p>
+                    <p style="margin: 15px 0;">Developed an interactive game with custom physics mechanics and engaging gameplay.</p>
+                    <div class="links">
+                        <a href="https://play.unity.com/en/user/5506264e-64f6-44ef-b57c-b2cbd0be9b28" target="_blank">
+                            🎮 Play Live Game
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h2>Snapchat AR Filter</h2>
+                    <p><strong>Technologies:</strong> Lens Studio, Computer Vision, AR</p>
+                    <p style="margin: 15px 0;">Created an interactive augmented reality experience with face tracking and effects.</p>
+                    <div class="links">
+                        <a href="https://www.snapchat.com/lens/617d25e9614f4c2fa7ad3f1b0f9eb70a" target="_blank">
+                            📸 Try Filter
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Tab -->
+            <div id="education" class="tab-content">
+                <div class="project">
+                    <h2>Education</h2>
+                    <h3>Northeastern University</h3>
+                    <p><strong>Master of Science in Robotics</strong> | Expected May 2026</p>
+                    <p>Concentration: Mechanical Engineering</p>
+                    <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong></p>
+                    <ul style="margin-left: 30px;">
+                        <li>Autonomous Field Robotics</li>
+                        <li>Assistive Robotics</li>
+                        <li>Control Systems Engineering</li>
+                        <li>Robotics Sensing and Navigation</li>
+                        <li>Robot Mechanics and Control</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 30px;">Southern Methodist University</h3>
+                    <p><strong>Bachelor of Science in Engineering Management</strong> | May 2022</p>
+                    <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong></p>
+                    <ul style="margin-left: 30px;">
+                        <li>Program and Project Management</li>
+                        <li>Scientific Computing</li>
+                        <li>Operations Research</li>
+                        <li>Statistics for Engineers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            var buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Highlight active button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
