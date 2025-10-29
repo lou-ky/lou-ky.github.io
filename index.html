@@ -14,15 +14,16 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f4f4f4;
+            color: #2d3436;
+            background: #f5f9f7;
         }
         
         header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
             padding: 2rem 0;
             text-align: center;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
         
         .container {
@@ -34,12 +35,14 @@
         .tabs {
             background: white;
             margin: 20px auto;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(74, 124, 89, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
         
         .tab-buttons {
             display: flex;
-            background: #34495e;
+            background: #4a7c59;
             overflow-x: auto;
         }
         
@@ -50,16 +53,19 @@
             padding: 15px 25px;
             cursor: pointer;
             font-size: 16px;
-            transition: background 0.3s;
+            transition: all 0.3s;
             white-space: nowrap;
+            position: relative;
         }
         
         .tab-button:hover {
-            background: #2c3e50;
+            background: #3d6449;
         }
         
         .tab-button.active {
-            background: #3498db;
+            background: #8fc0a9;
+            color: #1a1a1a;
+            box-shadow: inset 0 -3px 0 #4a7c59;
         }
         
         .tab-content {
@@ -69,16 +75,33 @@
         
         .tab-content.active {
             display: block;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .project {
             margin-bottom: 30px;
             padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 2px solid #caf0f8;
         }
         
         .project:last-child {
             border-bottom: none;
+        }
+        
+        .project h2 {
+            color: #4a7c59;
+            margin-bottom: 10px;
+        }
+        
+        .project h3 {
+            color: #3d6449;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
         
         .skills-grid {
@@ -89,19 +112,84 @@
         }
         
         .skill-category {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #caf0f8, #c3e9d0);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4a7c59;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 124, 89, 0.15);
+        }
+        
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
         
         .links a {
-            color: #3498db;
+            color: #4a7c59;
             text-decoration: none;
             margin-right: 15px;
+            padding: 5px 12px;
+            border: 2px solid #8fc0a9;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s;
+            font-weight: 500;
         }
         
         .links a:hover {
-            text-decoration: underline;
+            background: #4a7c59;
+            color: white;
+            transform: translateY(-2px);
+            border-color: #4a7c59;
+        }
+        
+        h2 {
+            color: #4a7c59;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+            color: #495057;
+        }
+        
+        strong {
+            color: #3d6449;
+        }
+        
+        /* Special styling for home tab */
+        #home h2 {
+            border-bottom: 3px solid #8fc0a9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        #home h3 {
+            color: #4a7c59;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        /* Header links styling */
+        header .links a {
+            color: white !important;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 5px 15px;
+            margin: 0 5px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        header .links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -109,12 +197,12 @@
     <header>
         <div class="container">
             <h1>Kyle Lou</h1>
-            <p>Robotics Engineer | MS Candidate at Northeastern University</p>
-            <div class="links" style="margin-top: 15px;">
-                <a href="mailto:lou.ky@northeastern.edu" style="color: white;">Email</a>
-                <a href="#" style="color: white;">LinkedIn</a>
-                <a href="#" style="color: white;">GitHub</a>
-                <a href="#" style="color: white;">Resume (PDF)</a>
+            <p style="margin-top: 10px; font-size: 1.1em;">Robotics Engineer | MS Candidate at Northeastern University</p>
+            <div class="links" style="margin-top: 20px;">
+                <a href="mailto:lou.ky@northeastern.edu">Email</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Resume (PDF)</a>
             </div>
         </div>
     </header>
@@ -132,7 +220,7 @@
             <!-- Home Tab -->
             <div id="home" class="tab-content active">
                 <h2>Welcome to My Portfolio</h2>
-                <p style="margin: 20px 0;">
+                <p style="margin: 20px 0; font-size: 1.05em; line-height: 1.8;">
                     I'm a Robotics MS student at Northeastern University with a unique background 
                     combining engineering management and hands-on technical skills. I'm passionate 
                     about creating intelligent systems that bridge mechanical design, computer vision, 
@@ -142,19 +230,19 @@
                 <h3>Technical Skills Summary</h3>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h4>Software</h4>
+                        <h4>🖥️ Software</h4>
                         <p>ROS, Python, MATLAB, C#, SQL</p>
                     </div>
                     <div class="skill-category">
-                        <h4>Hardware</h4>
+                        <h4>⚙️ Hardware</h4>
                         <p>3D Printing, Laser Cutting, CNC, Waterjet</p>
                     </div>
                     <div class="skill-category">
-                        <h4>Design Tools</h4>
+                        <h4>🎨 Design Tools</h4>
                         <p>SolidWorks, Unity, OpenCV, Adobe Illustrator</p>
                     </div>
                     <div class="skill-category">
-                        <h4>Robotics</h4>
+                        <h4>🤖 Robotics</h4>
                         <p>Computer Vision, Control Systems, Sensor Integration</p>
                     </div>
                 </div>
@@ -210,12 +298,29 @@
                 </div>
                 
                 <div class="project">
-                    <h2>Snapchat AR Filter</h2>
+                    <h2>Snapchat AR Filter - Potato IRL</h2>
                     <p><strong>Technologies:</strong> Lens Studio, Computer Vision, AR</p>
                     <p style="margin: 15px 0;">Created an interactive augmented reality experience with face tracking and effects.</p>
+                    
+                    <!-- Snapchat Embed -->
+                    <div style="display: flex; justify-content: center; margin: 20px 0;">
+                        <blockquote class="snapchat-embed" data-snapchat-embed-width="416" data-snapchat-embed-height="692" data-snapchat-embed-url="https://www.snapchat.com/lens/617d25e9614f4c2fa7ad3f1b0f9eb70a/embed" data-snapchat-embed-style="border-radius: 40px;" data-snapchat-embed-title="potato irl Lens" style="background:#C4C4C4; border:0; border-radius:40px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:416px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); display: flex; flex-direction: column; position: relative; height:650px;"> 
+                            <div style="display: flex; flex-direction: row; align-items: center;">  
+                                <a title="potato irl Lens" href="https://www.snapchat.com/lens/617d25e9614f4c2fa7ad3f1b0f9eb70a" style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; width: 40px; margin:16px; cursor: pointer"></a>  
+                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"></div> 
+                            </div> 
+                            <div style="flex: 1;"></div> 
+                            <div style="display: flex; flex-direction: row; align-items: center; border-end-end-radius: 40px; border-end-start-radius: 40px;">  
+                                <a title="potato irl Lens" href="https://www.snapchat.com/lens/617d25e9614f4c2fa7ad3f1b0f9eb70a" style="background-color: yellow; width:100%; padding: 10px 20px; border: none; border-radius: inherit; cursor: pointer; text-align: center; display: flex;flex-direction: row;justify-content: center; text-decoration: none; color: black;">  
+                                    View more on Snapchat  
+                                </a> 
+                            </div>
+                        </blockquote>
+                    </div>
+                    
                     <div class="links">
                         <a href="https://www.snapchat.com/lens/617d25e9614f4c2fa7ad3f1b0f9eb70a" target="_blank">
-                            📸 Try Filter
+                            📸 Try Filter Directly
                         </a>
                     </div>
                 </div>
@@ -225,7 +330,7 @@
             <div id="education" class="tab-content">
                 <div class="project">
                     <h2>Education</h2>
-                    <h3>Northeastern University</h3>
+                    <h3>🎓 Northeastern University</h3>
                     <p><strong>Master of Science in Robotics</strong> | Expected May 2026</p>
                     <p>Concentration: Mechanical Engineering</p>
                     <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong></p>
@@ -237,7 +342,7 @@
                         <li>Robot Mechanics and Control</li>
                     </ul>
                     
-                    <h3 style="margin-top: 30px;">Southern Methodist University</h3>
+                    <h3 style="margin-top: 30px;">🎓 Southern Methodist University</h3>
                     <p><strong>Bachelor of Science in Engineering Management</strong> | May 2022</p>
                     <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong></p>
                     <ul style="margin-left: 30px;">
@@ -272,5 +377,6 @@
             event.target.classList.add('active');
         }
     </script>
+    <script async src="https://www.snapchat.com/embed.js"></script>
 </body>
 </html>
