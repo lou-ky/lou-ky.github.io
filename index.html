@@ -274,12 +274,108 @@
                         <li>Optimized image alignment through GTSAM factor graph framework</li>
                         <li>Improved feature detection through CLAHE histogram equalization</li>
                     </ul>
-                    <div class="links">
-                        <a href="#">View Code</a>
-                        <a href="#">Documentation</a>
+                    
+                    <!-- Image Gallery for Results -->
+                    <div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
+                        <!-- CLAHE Results -->
+                        <div style="flex: 1; min-width: 200px; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #e0e0e0; min-height: 200px;" 
+                             onmouseover="this.querySelector('.caption').style.transform='translateY(0)'" 
+                             onmouseout="this.querySelector('.caption').style.transform='translateY(100%)'">
+                            <img src="images/CLAHE.png" alt="CLAHE Enhancement" style="width: 100%; display: block;" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div style="display: none; align-items: center; justify-content: center; flex-direction: column; min-height: 200px; padding: 20px; text-align: center;">
+                                <div style="font-size: 48px; color: #8fc0a9;">🔍</div>
+                                <p style="color: #4a7c59; font-weight: bold; margin: 10px 0;">CLAHE Enhancement</p>
+                                <small style="color: #999;">CLAHE.png</small>
+                            </div>
+                            <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(44, 62, 80, 0.95); color: white; padding: 15px; transform: translateY(100%); transition: transform 0.3s; pointer-events: none;">
+                                <strong style="color: white;">CLAHE Enhancement</strong>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9em; color: white;">Adaptive histogram equalization for underwater imagery</p>
+                            </div>
+                        </div>
+                        
+                        <!-- GTSAM Optimization -->
+                        <div style="flex: 1; min-width: 200px; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #e0e0e0; min-height: 200px;" 
+                             onmouseover="this.querySelector('.caption').style.transform='translateY(0)'" 
+                             onmouseout="this.querySelector('.caption').style.transform='translateY(100%)'">
+                            <img src="images/GTSAM.png" alt="GTSAM Optimization" style="width: 100%; display: block;" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div style="display: none; align-items: center; justify-content: center; flex-direction: column; min-height: 200px; padding: 20px; text-align: center;">
+                                <div style="font-size: 48px; color: #8fc0a9;">📊</div>
+                                <p style="color: #4a7c59; font-weight: bold; margin: 10px 0;">GTSAM Optimization</p>
+                                <small style="color: #999;">GTSAM.png</small>
+                            </div>
+                            <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(44, 62, 80, 0.95); color: white; padding: 15px; transform: translateY(100%); transition: transform 0.3s; pointer-events: none;">
+                                <strong style="color: white;">Factor Graph Optimization</strong>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9em; color: white;">GTSAM-based pose and landmark optimization</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Final Mosaic -->
+                        <div style="flex: 1; min-width: 200px; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #e0e0e0; min-height: 200px;" 
+                             onmouseover="this.querySelector('.caption').style.transform='translateY(0)'" 
+                             onmouseout="this.querySelector('.caption').style.transform='translateY(100%)'">
+                            <img src="images/Optimized Mosaic.png" alt="Final Mosaic" style="width: 100%; display: block;" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div style="display: none; align-items: center; justify-content: center; flex-direction: column; min-height: 200px; padding: 20px; text-align: center;">
+                                <div style="font-size: 48px; color: #8fc0a9;">🖼️</div>
+                                <p style="color: #4a7c59; font-weight: bold; margin: 10px 0;">Final Mosaic</p>
+                                <small style="color: #999;">Optimized Mosaic.png</small>
+                            </div>
+                            <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(44, 62, 80, 0.95); color: white; padding: 15px; transform: translateY(100%); transition: transform 0.3s; pointer-events: none;">
+                                <strong style="color: white;">Optimized Mosaic</strong>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9em; color: white;">Final reconstructed panorama of shipwreck site</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Add more robotics projects here -->
+                
+                <div class="project">
+                    <h2>3D Buddha Reconstruction Using Structure from Motion</h2>
+                    <p><strong>Technologies:</strong> COLMAP, Python, Multi-View Stereo, Bundle Adjustment</p>
+                    <ul style="margin: 15px 0 15px 30px;">
+                        <li>Processed multi-view image dataset to generate dense 3D point cloud reconstruction</li>
+                        <li>Applied COLMAP pipeline for feature extraction, matching, and sparse reconstruction</li>
+                        <li>Refined camera poses through bundle adjustment and generated textured mesh output</li>
+                    </ul>
+                    
+                    <!-- Image Gallery for Buddha Project -->
+                    <div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
+                        <!-- COLMAP Processing -->
+                        <div style="flex: 1; min-width: 250px; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #e0e0e0; min-height: 200px;" 
+                             onmouseover="this.querySelector('.caption').style.transform='translateY(0)'" 
+                             onmouseout="this.querySelector('.caption').style.transform='translateY(100%)'">
+                            <img src="images/colmap.png" alt="COLMAP Processing" style="width: 100%; display: block;" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div style="display: none; align-items: center; justify-content: center; flex-direction: column; min-height: 200px; padding: 20px; text-align: center;">
+                                <div style="font-size: 48px; color: #8fc0a9;">⚙️</div>
+                                <p style="color: #4a7c59; font-weight: bold; margin: 10px 0;">COLMAP Pipeline</p>
+                                <small style="color: #999;">colmap.png</small>
+                            </div>
+                            <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(44, 62, 80, 0.95); color: white; padding: 15px; transform: translateY(100%); transition: transform 0.3s; pointer-events: none;">
+                                <strong style="color: white;">COLMAP Pipeline</strong>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9em; color: white;">Feature matching and camera pose estimation</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Final Reconstruction -->
+                        <div style="flex: 1; min-width: 250px; position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: #e0e0e0; min-height: 200px;" 
+                             onmouseover="this.querySelector('.caption').style.transform='translateY(0)'" 
+                             onmouseout="this.querySelector('.caption').style.transform='translateY(100%)'">
+                            <img src="images/reconstruction.png" alt="3D Reconstruction" style="width: 100%; display: block;" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div style="display: none; align-items: center; justify-content: center; flex-direction: column; min-height: 200px; padding: 20px; text-align: center;">
+                                <div style="font-size: 48px; color: #8fc0a9;">🗿</div>
+                                <p style="color: #4a7c59; font-weight: bold; margin: 10px 0;">3D Reconstruction</p>
+                                <small style="color: #999;">reconstruction.png</small>
+                            </div>
+                            <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(44, 62, 80, 0.95); color: white; padding: 15px; transform: translateY(100%); transition: transform 0.3s; pointer-events: none;">
+                                <strong style="color: white;">3D Reconstruction</strong>
+                                <p style="margin: 5px 0 0 0; font-size: 0.9em; color: white;">Dense point cloud and mesh generation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Mechanical Tab -->
